@@ -17,5 +17,10 @@
     "url": "https://github.com/pjose92/node-api1-project/issues"
   },
   "homepage": "https://github.com/pjose92/node-api1-project#readme",
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
 }
