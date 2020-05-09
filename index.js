@@ -21,6 +21,8 @@ server.listen(PORT, () => {
 
 server.use(express.json());
 
+// GET 
+
 server.get("/", (req, res) => {
   res.send("Hello world!")
 })
@@ -32,6 +34,8 @@ server.get("/api/users", (req, res) => {
 server.get("/api/users", (req, res) => {
   res.status(500).json({ errorMessage: "The users info could not be retrieved" });
 })
+
+// POST
 
 server.post("/api/users", (req, res) => {
   const userInfo = req.body;
@@ -51,6 +55,8 @@ server.post("/api/users", (req, res) => {
 })
 
 
+// GET
+
 server.get("/api/users/:id", (req, res) => {
   const found = users.find(user => user.id === id);
 
@@ -67,6 +73,8 @@ server.get("/api/users/:id", (req, res) => {
   res.status(500).json({ errorMessage: "The user information could not be retrieved." })
 })
 
+
+// DELETE
 
 server.delete("/api/users/:id", (req, res) => {
   const { id } = req.params;
@@ -88,6 +96,8 @@ server.delete("/api/users/:id", (req, res) => {
   res.status(500).json({ errorMessage: "The user could not be removed" })
 })
 
+
+// PUT
 
 server.put("/api/users/:id", (req, res) => {
  
