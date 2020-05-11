@@ -21,9 +21,11 @@ server.get("/api/users", (req, res) => {
     });
   }
 });
+
+
+// GET 
 //===============================
-// GET
-//===============================
+
 server.get("/api/users/:id", (req, res) => {
   const userId = req.params.id;
   const user = data.getUserById(userId);
@@ -41,9 +43,9 @@ server.get("/api/users/:id", (req, res) => {
   }
 });
 
-//===============================
 // POST
 //===============================
+
 server.post("/api/users", (req, res) => {
   if (!req.body.name || !req.body.bio) {
     return res
@@ -63,7 +65,6 @@ server.post("/api/users", (req, res) => {
   }
 });
 
-//===============================
 // PUT
 //===============================
 
@@ -91,7 +92,6 @@ server.put("/api/users/:id", (req, res) => {
   }
 });
 
-//===============================
 // DELETE
 //===============================
 
